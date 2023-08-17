@@ -1,6 +1,4 @@
-import EmailIcon from '../icons/email'
-import FacebookIcon from '../icons/facebook'
-import InstagramIcon from '../icons/instagram'
+import SocialIcons from './social-icons'
 
 export default function Footer() {
   return (
@@ -8,19 +6,7 @@ export default function Footer() {
       <div className="">
         <p>Circle Three Designs © {new Date().getFullYear()}</p>
       </div>
-
-      {/* Social Icons */}
-      <div className="flex items-center gap-6">
-        <a href="mailto:info@CircleThreeDesigns.com">
-          <EmailIcon />
-        </a>
-        <a href="https://www.facebook.com/CircleThreeDesigns/" target="_blank">
-          <FacebookIcon />
-        </a>
-        <a href="https://www.instagram.com/circlethreedesigns/" target="_blank">
-          <InstagramIcon />
-        </a>
-      </div>
+      <SocialIcons />
     </footer>
   )
 }
