@@ -9,7 +9,7 @@ export default function CloseIcon() {
       aria-hidden="true"
       className="w-7 h-7 link"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
     </svg>
   )
 }
