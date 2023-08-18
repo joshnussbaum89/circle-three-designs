@@ -1,7 +1,7 @@
 export default function CartIcon() {
   return (
     <svg
-      className="w-6 h-6 link"
+      className="link h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"

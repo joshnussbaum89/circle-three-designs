@@ -22,7 +22,7 @@ h6 {
 }
 
 .link {
-  @apply text-gray-600 hover:text-orange-600 transition;
+  @apply text-gray-600 transition hover:text-orange-600;
 }
 
 /* Navigation */

@@ -11,11 +11,11 @@ export default function DesktopNavigation({ menuItems }: { menuItems: MenuItems[
   const depth = 0
 
   return (
-    <nav className="hidden lg:flex gap-8 justify-between items-center mb-8 px-8 py-4 border-b">
+    <nav className="mb-8 hidden items-center justify-between gap-8 border-b px-8 py-4 lg:flex">
       <Link href="/">
         <Image src={logo} alt="Circle Three Designs Logo" width={75} height={75} />
       </Link>
-      <ul className="flex items-center flex-wrap">
+      <ul className="flex flex-wrap items-center">
         {menuItems.map((menu, index) => (
           <MenuItems items={menu} key={index} depth={depth} />
         ))}
@@ -42,7 +42,7 @@ function MenuItems({ items, depth }: { items: MenuItems | SubMenuItems; depth: n
             aria-haspopup="menu"
             aria-expanded={open}
             onClick={handleSetOpen}
-            className="flex items-center gap-1 py-2 px-4"
+            className="flex items-center gap-1 px-4 py-2"
           >
             {items.title}
             <ChevronIcon />
@@ -50,7 +50,7 @@ function MenuItems({ items, depth }: { items: MenuItems | SubMenuItems; depth: n
           <Dropdown submenus={items.submenu} open={open} depth={depth} />
         </details>
       ) : (
-        <Link href={items.url} className="block py-2 px-4 link">
+        <Link href={items.url} className="link block px-4 py-2">
           {items.title}
         </Link>
       )}
@@ -73,7 +73,7 @@ function Dropdown({
     <ul
       className={
         open
-          ? 'block w-80 py-2 bg-white data-[depth="1"]:absolute data-[depth="1"]:border data-[depth="1"]:rounded-lg data-[depth="2"]:px-2 data-[depth="2"]:w-full data-[depth="2"]:border-y'
+          ? 'block w-80 bg-white py-2 data-[depth="1"]:absolute data-[depth="2"]:w-full data-[depth="1"]:rounded-lg data-[depth="1"]:border data-[depth="2"]:border-y data-[depth="2"]:px-2'
           : 'hidden'
       }
       data-depth={depth}

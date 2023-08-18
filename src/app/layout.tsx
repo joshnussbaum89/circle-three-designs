@@ -3,8 +3,16 @@ import { Bebas_Neue, Nunito } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/layout/footer'
 
-const bebas = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas' })
-const nunito = Nunito({ weight: '400', subsets: ['latin'], variable: '--font-nunito' })
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
+})
+const nunito = Nunito({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-nunito',
+})
 
 export const metadata: Metadata = {
   title: 'Circle Three Designs',

@@ -7,7 +7,7 @@ export default function HamburgerIcon() {
       strokeWidth="1.5"
       stroke="currentColor"
       aria-hidden="true"
-      className="w-7 h-7 link"
+      className="link h-7 w-7"
     >
       <path
         strokeLinecap="round"

@@ -2,7 +2,7 @@ import Navigation from './navigation'
 
 export default async function Header({ children }: { children: React.ReactNode }) {
   return (
-    <header className="min-h-screen flex flex-col">
+    <header className="flex min-h-screen flex-col">
       <Navigation />
       {children}
     </header>

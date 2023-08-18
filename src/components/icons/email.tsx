@@ -7,7 +7,7 @@ export default function EmailIcon() {
       strokeWidth="1.5"
       stroke="currentColor"
       aria-hidden="true"
-      className="w-6 h-6 link"
+      className="link h-6 w-6"
     >
       <path
         strokeLinecap="round"

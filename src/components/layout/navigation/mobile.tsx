@@ -17,7 +17,7 @@ export default function MobileNavigation({ menuItems }: { menuItems: MenuItems[]
   }
 
   return (
-    <nav className="flex justify-between items-center gap-8 p-4 border-b lg:hidden text-lg">
+    <nav className="flex items-center justify-between gap-8 border-b p-4 text-lg lg:hidden">
       <div onClick={handleSetNavOpen} className="cursor-pointer">
         {navOpen ? <CloseIcon /> : <HamburgerIcon />}
       </div>
@@ -31,7 +31,7 @@ export default function MobileNavigation({ menuItems }: { menuItems: MenuItems[]
       </Link>
 
       <ul
-        className={`absolute top-28 right-0 h-screen flex flex-col py-4 bg-white transition-all duration-300 ${
+        className={`absolute right-0 top-28 flex h-screen flex-col bg-white py-4 transition-all duration-300 ${
           navOpen ? 'visible left-0 opacity-100' : 'invisible -left-full opacity-0'
         }`}
       >
@@ -39,7 +39,7 @@ export default function MobileNavigation({ menuItems }: { menuItems: MenuItems[]
           <MenuItems items={menu} key={index} depth={depth} />
         ))}
 
-        <li className="mt-auto mx-auto p-8">
+        <li className="mx-auto mt-auto p-8">
           <SocialIcons />
         </li>
       </ul>
@@ -62,7 +62,7 @@ function MenuItems({ items, depth }: { items: MenuItems | SubMenuItems; depth: n
             aria-haspopup="menu"
             aria-expanded={open}
             onClick={handleSetOpen}
-            className="flex items-center gap-1 py-2 px-4"
+            className="flex items-center gap-1 px-4 py-2"
           >
             {items.title}
             <ChevronIcon />
@@ -70,7 +70,7 @@ function MenuItems({ items, depth }: { items: MenuItems | SubMenuItems; depth: n
           <Dropdown submenus={items.submenu} open={open} depth={depth} />
         </details>
       ) : (
-        <Link href={items.url} className="block py-2 px-4 link">
+        <Link href={items.url} className="link block px-4 py-2">
           {items.title}
         </Link>
       )}
@@ -90,7 +90,7 @@ function Dropdown({
   depth++
 
   return (
-    <ul className={open ? 'block p-2 bg-white border-y' : 'hidden'} data-depth={depth}>
+    <ul className={open ? 'block border-y bg-white p-2' : 'hidden'} data-depth={depth}>
       {submenus.map((submenu, index) => (
         <MenuItems items={submenu} key={index} depth={depth} />
       ))}

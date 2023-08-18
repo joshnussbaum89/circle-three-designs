@@ -2,10 +2,8 @@ import SocialIcons from './social-icons'
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between w-full h-24 border-t p-4 md:p-8 text-gray-600">
-      <div className="">
-        <p>Circle Three Designs © {new Date().getFullYear()}</p>
-      </div>
+    <footer className="flex h-24 w-full items-center justify-between border-t p-4 text-gray-600 md:p-8">
+      <p>Circle Three Designs © {new Date().getFullYear()}</p>
       <SocialIcons />
     </footer>
   )

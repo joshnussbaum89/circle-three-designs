@@ -7,7 +7,7 @@ export default function CloseIcon() {
       strokeWidth="1.5"
       stroke="currentColor"
       aria-hidden="true"
-      className="w-7 h-7 link"
+      className="link h-7 w-7"
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
     </svg>
